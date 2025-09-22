@@ -16,14 +16,14 @@ class MessageServiceProvider extends ServiceProvider
     public function register(): void
     {
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/Netty.php', 'Netty');
+        $this->mergeConfigFrom(__DIR__ . '/../config/netty.php', 'netty');
 
         $this->app->singleton(Message::class, function ($app) {
-            return new MessageRepository(config('Netty'));
+            return new MessageRepository(config('netty'));
         });
 
 
-        $this->app->alias(Message::class, 'Netty');
+        $this->app->alias(Message::class, 'netty');
     }
 
     /**
@@ -40,7 +40,7 @@ class MessageServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../config/Netty.php' => config_path('Netty.php'),
+            __DIR__ . '/../config/netty.php' => config_path('netty.php'),
         ], 'Netty');
     }
 }
