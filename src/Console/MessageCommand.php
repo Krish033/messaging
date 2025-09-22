@@ -1,6 +1,6 @@
 <?php
 
-namespace Krish033\Messaging\Console;
+namespace Krish033\Netty\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -15,10 +15,10 @@ class MessageCommand extends GeneratorCommand
     | within your application. Developers will use this name to run
     | the command in the terminal.
     |
-    | Example: php artisan Messaging:make WelcomeTemplate
+    | Example: php artisan Netty:make WelcomeTemplate
     |
     */
-    protected $name = 'Messaging:make';
+    protected $name = 'Netty:make';
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ class MessageCommand extends GeneratorCommand
     | of the command in a human-readable way.
     |
     */
-    protected $description = 'Create a new Messaging message template';
+    protected $description = 'Create a new Netty message template';
 
     /*
     |--------------------------------------------------------------------------
@@ -66,11 +66,11 @@ class MessageCommand extends GeneratorCommand
     |
     | This method determines the namespace into which the new class will
     | be generated. By default, templates will live inside the user's
-    | "App\Messaging\Templates" namespace unless customized.
+    | "App\Netty\Templates" namespace unless customized.
     |
     */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Messaging\Templates';
+        return $rootNamespace . '\Netty\Templates';
     }
 }

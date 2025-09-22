@@ -1,12 +1,12 @@
 {
-  "name": "krish033/messaging",
-  "description": "Otp login for lazydev",
+  "name": "krish033/netty",
+  "description": "Netty is a Laravel package crafted with ❤️ to simplify SMS & OTP workflows using NettyFish APIs. Instead of wiring up HTTP clients, manually handling payloads, and fighting with configs, Netty gives you: ",
   "type": "library",
   "version": "1.0.0",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Krish033\\Messaging\\": "src/"
+      "Krish033\\Netty\\": "src/"
     }
   },
   "authors": [
@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Krish033\\Messaging\\MessageServiceProvider"
+        "Krish033\\Netty\\MessageServiceProvider"
       ]
     }
   }

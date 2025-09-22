@@ -1,6 +1,6 @@
 <?php
 
-namespace Krish033\Messaging\Facades;
+namespace Krish033\Netty\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
 |--------------------------------------------------------------------------
 |
 | This Facade provides a simple and expressive interface to interact with
-| the underlying "message" service within the Messaging package. Instead of
+| the underlying "message" service within the Netty package. Instead of
 | resolving the service out of the container manually, you may call
 | methods statically using the Facade, keeping your code clean.
 |
@@ -48,7 +48,7 @@ class Message extends Facade
     | message service grows.
     |
     | Available Methods:
-    |   @method static \Krish033\Messaging\Contracts\Message send(\Krish033\Messaging\Contracts\Netty $message)
+    |   @method static \Krish033\Netty\Contracts\Message send(\Krish033\Netty\Contracts\Netty $message)
     |   @method static \Illuminate\Http\Client\Response to(string ...$recipient)
     |
     */

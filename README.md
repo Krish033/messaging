@@ -1,9 +1,9 @@
-# Messaging 🚀
+# Netty 🚀
 
 > **Built to make working with [NettyFish](https://nettyfish.com/) easier, faster, and more Laravel-ish.**
 
-Messaging is a Laravel package crafted with ❤️ to simplify SMS & OTP workflows using NettyFish APIs.  
-Instead of wiring up HTTP clients, manually handling payloads, and fighting with configs, Messaging gives you:
+Netty is a Laravel package crafted with ❤️ to simplify SMS & OTP workflows using NettyFish APIs.  
+Instead of wiring up HTTP clients, manually handling payloads, and fighting with configs, Netty gives you:
 
 - ⚡ A clean repository + contract-based structure
 - 🏗️ Facade support for developer-friendly syntax
@@ -20,7 +20,7 @@ Perfect for OTP verification systems, transactional messages, and any NettyFish 
 Require the package via Composer:
 
 ```bash
-composer require krish033/Messaging
+composer require krish033/Netty
 ```
 
 Publish the config file:
@@ -44,7 +44,7 @@ NETTYFISH_PEID=
 
 ## ⚙️ Configuration
 
-Once published, the config file (config/messaging.php) will allow you to control your NettyFish integration.
+Once published, the config file (config/Netty.php) will allow you to control your NettyFish integration.
 Each environment value maps directly to the API parameters, ensuring clean separation of concerns.
 
 ### Creating a Template

@@ -1,12 +1,12 @@
 <?php
 
-namespace Krish033\Messaging;
+namespace Krish033\Netty;
 
 use Illuminate\Support\ServiceProvider;
-use Krish033\Messaging\Contracts\Auth;
-use Krish033\Messaging\Repositories\AuthRepository;
-use Krish033\Messaging\Contracts\Message;
-use Krish033\Messaging\Repositories\MessageRepository;
+use Krish033\Netty\Contracts\Auth;
+use Krish033\Netty\Repositories\AuthRepository;
+use Krish033\Netty\Contracts\Message;
+use Krish033\Netty\Repositories\MessageRepository;
 
 class MessageServiceProvider extends ServiceProvider
 {
@@ -16,14 +16,14 @@ class MessageServiceProvider extends ServiceProvider
     public function register(): void
     {
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/messaging.php', 'messaging');
+        $this->mergeConfigFrom(__DIR__ . '/../config/Netty.php', 'Netty');
 
         $this->app->singleton(Message::class, function ($app) {
-            return new MessageRepository(config('messaging'));
+            return new MessageRepository(config('Netty'));
         });
 
 
-        $this->app->alias(Message::class, 'messaging');
+        $this->app->alias(Message::class, 'Netty');
     }
 
     /**
@@ -35,12 +35,12 @@ class MessageServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \Krish033\Messaging\Console\MessageCommand::class,
+                \Krish033\Netty\Console\MessageCommand::class,
             ]);
         }
 
         $this->publishes([
-            __DIR__ . '/../config/messaging.php' => config_path('messaging.php'),
-        ], 'messaging');
+            __DIR__ . '/../config/Netty.php' => config_path('Netty.php'),
+        ], 'Netty');
     }
 }

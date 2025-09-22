@@ -1,11 +1,11 @@
 <?php
 
-namespace Krish033\Messaging\Repositories;
+namespace Krish033\Netty\Repositories;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
-use Krish033\Messaging\Contracts\Message;
-use Krish033\Messaging\Contracts\Netty;
+use Krish033\Netty\Contracts\Message;
+use Krish033\Netty\Contracts\Netty;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ class MessageRepository implements Message
     /**
      * The message template to be sent.
      *
-     * @var \Krish033\Messaging\Contracts\Netty
+     * @var \Krish033\Netty\Contracts\Netty
      */
     protected $message;
 
@@ -53,7 +53,7 @@ class MessageRepository implements Message
     /**
      * Assign the message template instance.
      *
-     * @param  \Krish033\Messaging\Contracts\Netty  $message
+     * @param  \Krish033\Netty\Contracts\Netty  $message
      * @return $this
      */
     public function send(Netty $message): self

@@ -1,6 +1,6 @@
 <?php
 
-namespace Krish033\Messaging\Contracts;
+namespace Krish033\Netty\Contracts;
 
 interface Message
 {
@@ -16,11 +16,11 @@ interface Message
     | Example usage:
     |   $message->send(new WelcomeTemplate());
     |
-    | @param \Krish033\Messaging\Contracts\Netty $message
+    | @param \Krish033\Netty\Contracts\Netty $message
     | @return mixed
     |
     */
-    public function send(Netty $message);
+    public function send(NettyFish $message);
 
     /*
     |--------------------------------------------------------------------------

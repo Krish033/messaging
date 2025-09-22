@@ -1,8 +1,8 @@
 <?php
 
-namespace Krish033\Messaging\Contracts;
+namespace Krish033\Netty\Contracts;
 
-interface Netty
+interface NettyFish
 {
     /*
     |--------------------------------------------------------------------------

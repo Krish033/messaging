@@ -2,9 +2,9 @@
 
 namespace DummyNamespace;
 
-use Krish033\Messaging\Contracts\Netty;
+use Krish033\Netty\Contracts\NettyFish;
 
-class DummyClass implements Netty
+class DummyClass implements NettyFish
 {
 
 
