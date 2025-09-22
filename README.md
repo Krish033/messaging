@@ -20,7 +20,7 @@ Perfect for OTP verification systems, transactional messages, and any NettyFish 
 Require the package via Composer:
 
 ```bash
-composer require krish033/Netty
+composer require krish033/netty
 ```
 
 Publish the config file:
